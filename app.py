@@ -5,10 +5,9 @@ import os
 from dotenv import load_dotenv
 import base64
 
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
-ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID")
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+ELEVENLABS_API_KEY = st.secrets["ELEVENLABS_API_KEY"]
+ELEVENLABS_VOICE_ID = st.secrets["ELEVENLABS_VOICE_ID"]
 
 openai.api_key = OPENAI_API_KEY
 
